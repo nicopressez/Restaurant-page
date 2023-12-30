@@ -12,6 +12,7 @@ body
 
 *
 {
+  box-sizing: border-box;
   font-family: "Rubik Doodle Shadow", sans-serif;
   margin: 0 0;
 }
@@ -20,14 +21,15 @@ body
 {
  text-align: center;
  color: var(--main-color3);
- background-color: var(--main-color1);
+ background-color: rgba(35, 36, 36);
  border-bottom: 4px solid var(--main-color3);
- position:static;
+ position:fixed;
+ top: 0px;
  width: 100%;
  height: 130px;
 }
 
-.head h1
+.head .headTitle
 {
     font-size: 4rem;
     padding-top: 30px;
@@ -38,7 +40,7 @@ body
     margin-top: 7px;
     font-size: 1.6rem;
     color: var(--main-color3);
-    background-color: var(--main-color2);
+    background-color: var(--main-color2) ;
     width: 200px;
     height: 40px;
     border: 4px solid var(--main-color3);
@@ -52,4 +54,37 @@ body
 .head button:active
 {
     filter: brightness(90%);
+}
+
+.main 
+{
+    text-align: center;
+    background-color:  rgba(35, 36, 36, 0.9);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    border: 4px solid var(--main-color3);
+    width: 700px;
+    height: 800px;
+    border-radius: 3%;
+}
+
+.main h2
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 4rem;
+    font-style: bold;
+    color: var(--main-color2);
+    font-weight: bold;
+}
+
+.main p
+{
+    margin-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 2rem;
+    color: var(--main-color3)
 }
