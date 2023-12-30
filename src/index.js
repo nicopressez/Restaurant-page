@@ -1,1 +1,3 @@
-console.log("resr")
+import { addContent } from "./content";
+
+addContent();
