@@ -1,14 +1,31 @@
 import { addContent } from "./content";
-import { homeContent } from "./homecontent";
-import { menuContent } from "./menucontent";
-import { contactContent } from "./contactcontent";
-import { menuButton } from "./content";
-addContent();
-//contactContent();
-//menuContent();
-//homeContent();
+import { homeContent, removeHomeContent } from "./homecontent";
+import { menuContent, removeMenuContent } from "./menucontent";
+import { contactContent, removeContactContent } from "./contactcontent";
 
-menuButton.addEventListener("click", () => menuContent());
+function onHomeButtonClick(){
+    removeHomeContent();
+    removeContactContent();
+    removeMenuContent();
+    homeContent();
+};
+
+function onMenuButtonClick(){
+    removeHomeContent();
+    removeContactContent(); 
+    removeMenuContent();
+    menuContent();
+};
+
+function onContactButtonClick(){
+    removeHomeContent();
+    removeContactContent(); 
+    removeMenuContent();
+    contactContent();
+};
+
+addContent(onHomeButtonClick, onMenuButtonClick, onContactButtonClick);
+homeContent();
 
 
 

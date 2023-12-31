@@ -4,7 +4,7 @@ import { contactContent } from "./contactcontent";
 import { removeHomeContent } from "./homecontent";
 import { removeContactContent } from "./contactcontent";
 import { removeMenuContent } from "./menucontent";
-export function addContent(){
+export function addContent(onHomeButtonClick, onMenuButtonClick, onContactButtonClick){
 
 const contentParent = document.getElementById("content");
 
@@ -25,9 +25,9 @@ homeButton.textContent = "HOME";
 menuButton.textContent = "MENU";
 contactButton.textContent = "CONTACT";
 
-homeButton.addEventListener("click", () => {removeHomeContent(); removeContactContent(); removeMenuContent();homeContent()});
-contactButton.addEventListener("click", () => {removeHomeContent(); removeContactContent(); removeMenuContent();contactContent()});
-menuButton.addEventListener("click", () => {removeHomeContent(); removeContactContent(); removeMenuContent(); menuContent()})
+homeButton.addEventListener("click", () => onHomeButtonClick());
+contactButton.addEventListener("click", () => onContactButtonClick());
+menuButton.addEventListener("click", () => onMenuButtonClick());
 
 contentParent.appendChild(headSection);
 headSection.appendChild(headTitle);
