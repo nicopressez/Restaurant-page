@@ -3,7 +3,7 @@ export function contactContent(){
     const contentParent = document.getElementById("content");
     
     const mainSection = document.createElement("section");
-    mainSection.classList.add("homeSection");
+    mainSection.classList.add("contactSection");
     const mainSectionTitle = document.createElement("h2");
     const mainSectionText = document.createElement("p");
     const mainSectionTextSecond = document.createElement("p");
@@ -17,3 +17,11 @@ export function contactContent(){
     mainSection.appendChild(mainSectionText)
     mainSection.appendChild(mainSectionTextSecond)
     }
+
+    export function removeContactContent()
+{
+    const contentParent = document.getElementById("content");
+    const mainSection = document.getElementsByClassName("contactSection")[0];
+    if (mainSection)
+    {contentParent.removeChild(mainSection);}
+}

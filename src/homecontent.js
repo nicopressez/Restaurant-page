@@ -1,4 +1,4 @@
-export function homeContent(){
+export function homeContent() {
 
 const contentParent = document.getElementById("content");
 
@@ -16,3 +16,14 @@ contentParent.appendChild(mainSection);
 mainSection.appendChild(mainSectionTitle)
 mainSection.appendChild(mainSectionText)
 mainSection.appendChild(mainSectionTextSecond)}
+
+export function removeHomeContent()
+{
+    const contentParent = document.getElementById("content");
+    const mainSection = document.getElementsByClassName("homeSection")[0];
+    if (mainSection)
+    {contentParent.removeChild(mainSection);}
+}
+
+
+

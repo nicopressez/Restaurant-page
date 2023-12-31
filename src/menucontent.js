@@ -3,7 +3,7 @@ export function menuContent(){
 const contentParent = document.getElementById("content");
 
 const mainSection = document.createElement("section");
-mainSection.classList.add("homeSection");
+mainSection.classList.add("menuSection");
 const mainSectionTitle = document.createElement("h2");
 const mainSectionText = document.createElement("p");
 const mainSectionTextSecond = document.createElement("p");
@@ -16,5 +16,13 @@ contentParent.appendChild(mainSection);
 mainSection.appendChild(mainSectionTitle)
 mainSection.appendChild(mainSectionText)
 mainSection.appendChild(mainSectionTextSecond)
+}
+
+export function removeMenuContent()
+{
+    const contentParent = document.getElementById("content");
+    const mainSection = document.getElementsByClassName("menuSection")[0];
+    if (mainSection)
+    {contentParent.removeChild(mainSection);}
 }
 
