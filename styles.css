@@ -56,7 +56,7 @@ body
     filter: brightness(90%);
 }
 
-.main 
+.homeSection
 {
     text-align: center;
     background-color:  rgba(35, 36, 36, 0.9);
@@ -70,7 +70,7 @@ body
     border-radius: 3%;
 }
 
-.main h2
+.homeSection h2
 {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -80,7 +80,7 @@ body
     font-weight: bold;
 }
 
-.main p
+.homeSection p
 {
     margin-bottom: 30px;
     padding-left: 40px;
